@@ -9,7 +9,7 @@
 ## 📊 Power BI Dashboard Preview
 
 ![Dashboard Overview](dashboard_overview.png)
-![RTT Waiting Times](images/rtt_waiting_times.png)
+![RTT Waiting Times](rtt_waiting_times.png)
 ![Patient Flow Map](images/patient_flow_map.png)
 
 ---
