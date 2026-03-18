@@ -10,7 +10,7 @@
 
 ![Dashboard Overview](dashboard_overview.png)
 ![RTT Waiting Times](rtt_waiting_times.png)
-![Patient Flow Map](images/patient_flow_map.png)
+![Patient Flow Map](patient_flow_map.png)
 
 ---
 
