@@ -1,6 +1,6 @@
 # 🏥 NHS Elective Recovery & Patient Flow Analysis
 
-![NHS Banner](images/nhs_banner.png)
+![NHS Banner](nhs_banner.png)
 
 > **End-to-end analytics project** tracking NHS elective care recovery post-COVID, referral-to-treatment (RTT) waiting times, and patient flow efficiency across NHS Trusts in England.
 
