@@ -1,0 +1,31 @@
+name: NHS Elective Recovery — CI
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r requirements-dev.txt
+          pip install pandas numpy pyarrow scikit-learn
+      - name: Lint
+        run: flake8 src/ tests/ --max-line-length=120 --exclude=__pycache__
+      - name: Test
+        run: pytest tests/ -v --cov=src --cov-report=xml --cov-fail-under=75
+      - name: Upload coverage
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: coverage
+          path: coverage.xml
